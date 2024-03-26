@@ -1,0 +1,14 @@
+<ng-container *ngIf="robotService.robotSate$ | async as robotSate">
+  <div class="table-container">
+    <div class="robotcol" *ngFor="let col of robotcols">
+      <div class="robotrow">
+        <div class="row" *ngFor="let row of robotRows" (click)="placeRobot(col,row)">
+          <app-cell
+            [isRobotPosition]="robotSate.x == col && robotSate.y == row "
+            [direction]="robotSate.f">
+          </app-cell>
+        </div>
+      </div>
+    </div>
+  </div>
+  </ng-container>

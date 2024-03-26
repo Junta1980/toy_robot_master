@@ -1,0 +1,28 @@
+.container {
+  position: relative;
+  width: 90dvw;
+  height: 90dvh;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin: 5dvh 5dvw;
+  background:#FAE7D5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media  (max-width:767px){
+    width: 100dvw;
+    height: 100dvh;
+    margin:0;
+  }
+  @media  (max-width:767px) and (orientation: portrait){
+    justify-content: flex-start;
+    padding-top: 15vh;
+  }
+
+}
+
+
+
+
+

@@ -1,0 +1,53 @@
+.modal{
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  background-color: #efefef;
+  width: 25dvw;
+  height: 13dvh;
+  border: 1px solid;
+  z-index: 1;
+  @media  (max-width:767px){
+    top: 0;
+    width: 60dvw;
+    height: 9dvh;
+  }
+  @media  (max-width:767px) and (orientation: landscape){
+    top: 22dvh;
+    bottom: 0;
+    width:  25dvw;
+    height: 19dvh;
+  }
+  p,
+  h3{
+    margin-left: 5%;
+  }
+
+  h3{
+    font-size: clamp(8px , 1.3vw , 20px);
+  }
+
+  p{
+    font-size: clamp(8px , 1vw , 16px);
+  }
+
+}
+
+.is-success{
+  border-left-color: green;
+  border-left-width: 8px;
+}
+
+.is-warning{
+  border-left-color: yellow;
+  border-left-width: 8px;
+}
+
+.is-danger{
+  border-left-color: red;
+  border-left-width: 8px;
+}
+
+
+
+

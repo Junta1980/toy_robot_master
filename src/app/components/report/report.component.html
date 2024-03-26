@@ -1,0 +1,4 @@
+<div class="flex-center">
+  <app-button (onClick)="report()">REPORT</app-button>
+  <p class="report-cordinate" *ngIf="RobotReport">{{robotService.robotSateReport$ | async}}</p>
+</div>

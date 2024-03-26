@@ -1,0 +1,7 @@
+<ng-container *ngIf="{robotSateIsPlaced: robotService.robotSateIsPlaced$ | async } as state ">
+  <div class="flex-centerd">
+    <app-button (onClick)="leftRobot()"  [disabled]="!state.robotSateIsPlaced || false">LEFT</app-button>
+    <app-button (onClick)="rigthRobot()" [disabled]="!state.robotSateIsPlaced || false">RIGHT</app-button>
+    <app-button (onClick)="moveRobot()"  [disabled]="!state.robotSateIsPlaced || false">MOVE</app-button>
+  </div>
+</ng-container>

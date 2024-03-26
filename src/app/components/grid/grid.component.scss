@@ -1,0 +1,35 @@
+.table-container {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #333;
+  height: 55dvmin;
+  width: 55dvmin;
+  margin: 2dvh auto;
+  background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .2)), url('../../../assets/PIA17944_desktop.jpg');
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+
+  .robotcol {
+    flex: 1;
+  }
+
+.row {
+  flex: 1;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.robotrow {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #ccc;
+    height: 100%;
+    width: 100%;
+}
+
+}
