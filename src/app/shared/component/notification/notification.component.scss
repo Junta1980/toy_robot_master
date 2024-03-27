@@ -24,11 +24,11 @@
   }
 
   h3{
-    font-size: clamp(8px , 1.3vw , 20px);
+    font-size: clamp(0.5rem, 0.3533rem + 0.6522vw, 1.25rem);
   }
 
   p{
-    font-size: clamp(8px , 1vw , 16px);
+    font-size: clamp(0.5rem, 0.4022rem + 0.4348vw, 1rem);
   }
 
 }
