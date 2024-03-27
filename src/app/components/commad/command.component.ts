@@ -15,20 +15,27 @@ export class CommandComponent implements OnInit {
   place = new FormControl( null , { updateOn: 'blur' , validators: [Validators.required, customFormatValidatorFormat , customFormatValidatorCoordinate]});
   constructor(public robotService: RobotService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.robotService.robotSateIsPlaced$.subscribe( isPlaced =>{
+      if(isPlaced){
+        this.place.reset();
+      }
+    });
+  }
 
   placeRobot(){
-    console.log(this.place)
     if(this.place.invalid){
       return
     }
-    let value: string = this.place.value|| ''
-    const [x, y, f] = value ? value.trim().split(',') : '';
-    console.log(x, y, f)
 
+    let value: string = this.place.value|| ''
+    let [x, y, f] = value ? value.trim().split(',') : '';
+    if(f){
+      f = f.toUpperCase();
+    }
+    this.place.reset();
     this.robotService.place(Number(x),Number(y), Direction[f])
   }
-
 
 
 }

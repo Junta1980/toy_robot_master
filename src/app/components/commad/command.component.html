@@ -2,7 +2,7 @@
   <input [formControl]="place" placeholder="insert coordinate x,y,f (ex 1,1,N) or click on table" class="input-text input_coordinate">
   <app-button (onClick)="placeRobot()">PLACE</app-button>
 </div>
-<div class="form_error" *ngIf="place.invalid && (place.dirty || place.touched) && !(robotService.robotSateIsPlaced$ |async) ">
+<div class="form_error" *ngIf="place.invalid && (place.dirty || place.touched)  ">
   <span *ngIf="place.errors?.['required']"> Insert coordinate </span>
   <span *ngIf="place.errors?.['invalidFormat'] && !place.errors?.['required']"> coordinate must be in format x,y,f </span>
   <span *ngIf="place.errors?.['invalidCoordinate'] && !place.errors?.['required']"> coordinate not valid enter x between 0 and {{robotCols -1}} Y  between 0 and {{robotRow-1}}  </span>

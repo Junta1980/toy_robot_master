@@ -10,8 +10,8 @@ import { BehaviorSubject, Observable, map } from 'rxjs';
 
 
 export class RobotService {
-  public robotSate$: BehaviorSubject<RobotSate> = new BehaviorSubject<RobotSate>({  x: -1,y: -1, f: Direction.NONE})
-
+  private robotSate: BehaviorSubject<RobotSate> = new BehaviorSubject<RobotSate>({  x: -1,y: -1, f: Direction.NONE})
+  public robotSate$ : Observable<RobotSate> = this.robotSate.asObservable();
   x: number = -1;
   y: number =1;
   direction: Direction = Direction.NONE;
@@ -31,7 +31,7 @@ export class RobotService {
   }
 
   emitRobotState(){
-    this.robotSate$.next({x: this.x , y: this.y , f: this.direction})
+    this.robotSate.next({x: this.x , y: this.y , f: this.direction})
   }
 
   get robotSateY(): Observable<number>{
