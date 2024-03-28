@@ -27,3 +27,25 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 to execute the unit tests using [Slenium](https://www.selenium.dev/documentation/webdriver/), please refer to the repository at (https://github.com/Junta1980/toy_robot_test)
+
+### Example Input and Output
+a)
+```
+PLACE 0,0,N
+MOVE
+REPORT
+```
+Output: `0,1,N`
+
+B)
+```
+PLACE 1,1,E
+MOVE
+MOVE
+LEFT
+MOVE
+REPORT
+```
+Output: `3,2,N`
+
+
